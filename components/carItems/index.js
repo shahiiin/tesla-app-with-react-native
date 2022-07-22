@@ -1,5 +1,7 @@
 import React from "react";
 import { View,Text,ImageBackground } from "react-native";
+import StyleButton from "../styleButton";
+
 import styles from "./style";
 
 
@@ -11,6 +13,7 @@ const CarItem = ()=> {
         <Text style={styles.title}>Modal S</Text>
         <Text style={styles.subtitle}>starting at 69.420$</Text>
        </View>
+       <StyleButton type='primary'/>
      </View>
     )
 }
