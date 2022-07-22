@@ -4,19 +4,20 @@ import styles from "./style";
 
 const StyleButton =(props)=> {
 
-    const type = props.type;
+  
+     const {type,content,onPress} = props
+
      const backgroundColor = type === 'primary' ? '#171A20CC' : '#FFFFFFA6';
+
      const textColor = type === 'primary' ? '#FFFFFF' : '#171A20';
     
     return ( 
         <View style={styles.container}>
           <Pressable
           style={[styles.button,{backgroundColor:backgroundColor}]}
-          onPress={()=>{
-          console.warn('hello')
-         }}
+          onPress={() => onPress() }
         >
-         <Text style={[styles.text,{color:textColor}]}>custom order</Text>
+         <Text style={[styles.text,{color:textColor}]}>{content}</Text>
         </Pressable>
         </View>
      );
